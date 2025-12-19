@@ -2,6 +2,7 @@ import { useHabitos } from "./components/Habitos/GestionHabitos/UseGestionHabito
 import FormularioHabito from "./Components/Habitos/FormularioNuevoHabitos/FormularioHabitos";
 import ListaHabitos from "./Components/Habitos/ListaDeHabitos/ListaHabitos"
 
+
 function App() {
   const { habitos, agregarHabito } = useHabitos();
   return (

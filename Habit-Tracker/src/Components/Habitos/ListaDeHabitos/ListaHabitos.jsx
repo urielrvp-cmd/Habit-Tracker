@@ -1,4 +1,5 @@
 //Muestra la lista de habitos
+import ItemHabito from "../HabitosItem/HabitosItem";
 
 function ListaHabitos({ habitos }) {
   if (habitos.length === 0) {
@@ -6,9 +7,12 @@ function ListaHabitos({ habitos }) {
   }
 
   return (
-    <ul>
+    <ul className="lista-habitos">
       {habitos.map((habito) => (
-        <li key={habito.id}>{habito.nombre}</li>
+        <ItemHabito
+          key={habito.id}
+          habito={habito}
+        />
       ))}
     </ul>
   );
