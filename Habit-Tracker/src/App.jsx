@@ -46,35 +46,45 @@ function App() {
         </div>
       </header>
 
-      <main className="contenedor-principal"> 
+      <main className="contenedor-principal">
         <FormularioHabito onAgregar={agregarHabito} />
+        <section className="contenedor-columnas">
           <section className="columna columna-pendientes">
-            <h2>Pendientes</h2>
-              <ListaHabitos
-                habitos={habitosPendientes}
-                onAlternar={alternarHabito}
-                onEliminar={eliminarHabito}
-                />
-          </section>
-
-          <section className="columna columna-completados">
-            <h2>Completados</h2>
-            {habitosCompletados.length > 0 && (
-              <button onClick={eliminarCompletados}>
-              Eliminar completados
-            </button>
-          )}
-          <ListaHabitos
-            habitos={habitosCompletados}
-            onAlternar={alternarHabito}
-            onEliminar={eliminarHabito}
+            <h2 className="titulo-columna">Pendientes</h2>
+            <ListaHabitos
+              habitos={habitosPendientes}
+              onAlternar={alternarHabito}
+              onEliminar={eliminarHabito}
             />
+          </section>
+          <section className="columna columna-completados">
+            <h2 className="titulo-columna">Completados</h2>
+            {habitosCompletados.length > 0 && (
+              <button
+                className="boton-eliminar-completados"
+                onClick={eliminarCompletados}
+              >
+                🗑 Eliminar completados
+              </button>
+            )}
+            <ListaHabitos
+              habitos={habitosCompletados}
+              onAlternar={alternarHabito}
+              onEliminar={eliminarHabito}
+            />
+          </section>
         </section>
         <Resumen
           total={habitos.length}
           completados={habitosCompletados.length}
-          />
-      </main>  
+        />
+      </main>
+
+      <footer className="pie-aplicacion">
+        <p className="texto-pie">
+          © 2025 Habit Tracker. Todos los derechos reservados.
+        </p>
+      </footer>
     </div>
   );
 }
