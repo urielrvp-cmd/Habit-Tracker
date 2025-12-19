@@ -3,6 +3,7 @@ import { useHabitos } from "./components/Habitos/GestionHabitos/UseGestionHabito
 import FormularioHabito from "./Components/Habitos/FormularioNuevoHabitos/FormularioHabitos";
 import ListaHabitos from "./Components/Habitos/ListaDeHabitos/ListaHabitos"
 import Resumen from "./Components/Habitos/ResumenDeHabitos/ResumenHabitos";
+import "./index.css"
 
 const STORAGE_MODO = "modo-oscuro";
 

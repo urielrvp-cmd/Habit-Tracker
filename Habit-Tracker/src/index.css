@@ -1,4 +1,39 @@
+.modo-claro {
+  --fondo-general: linear-gradient(135deg, #6a11cb, #2575fc);
+  --fondo-app: linear-gradient(135deg, #8b4fec, #cb23d4);
+  --texto-principal: #1f2937;
+  --pendientes-fondo: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  --completados-fondo: linear-gradient(135deg, #d4fc79, #96e6a1);
+  --item-fondo: linear-gradient(135deg, #6b11cb79, #2575fc);
+}
+
+.modo-oscuro {
+  --fondo-general: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --fondo-app: linear-gradient(135deg, #0f172a, #020617);
+  --texto-principal: #ffffff;
+  --pendientes-fondo: linear-gradient(135deg, #232526, #414345);
+  --completados-fondo: linear-gradient(135deg, #134e5e, #071e3d);
+  --item-fondo: #2a2a2a;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--fondo-general);
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
 }
+
+body,
+.contenedor-principal,
+.columna,
+.item-habito,
+.encabezado-aplicacion,
+.pie-aplicacion {
+  transition: background 0.6s ease,
+              color 0.6s ease,
+              box-shadow 0.6s ease;
+}
+
