@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./FormularioHabitosEstilos.css"
 
-function FormularioHabito({ onAgregar }) {
+export default function FormularioHabito({ onAgregar }) {
   const [nombre, setNombre] = useState("");
 
   const manejarEnvio = (e) => {
@@ -25,5 +25,3 @@ function FormularioHabito({ onAgregar }) {
     </form>
   );
 }
-
-export default FormularioHabito;
