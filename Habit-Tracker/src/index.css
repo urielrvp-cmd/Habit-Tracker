@@ -46,3 +46,39 @@ body,
   background: var(--fondo-app);
   color: var(--texto-principal);
 }
+
+.contenedor-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.columna {
+  padding: 1rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.columna:hover {
+  transform: translateY(-4px);
+}
+
+.columna-pendientes {
+  background: var(--pendientes-fondo);
+}
+
+.columna-completados {
+  background: var(--completados-fondo);
+}
+
+.columna-pendientes,
+.columna-completados {
+  transition: background 0.8s ease;
+}
+
+.titulo-columna {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
