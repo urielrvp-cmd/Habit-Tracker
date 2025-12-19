@@ -1,0 +1,15 @@
+.contenedor-resumen {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.dato-resumen {
+  text-align: center;
+  flex: 1;
+  font-weight: bold;
+}

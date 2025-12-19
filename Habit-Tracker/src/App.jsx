@@ -49,16 +49,16 @@ function App() {
       <main className="contenedor-principal">
         <FormularioHabito onAgregar={agregarHabito} />
         <section className="contenedor-columnas">
-          <section className="columna columna-pendientes">
+          <div className="columna columna-pendientes">
             <h2 className="titulo-columna">Pendientes</h2>
             <ListaHabitos
               habitos={habitosPendientes}
               onAlternar={alternarHabito}
               onEliminar={eliminarHabito}
             />
-          </section>
-          <section className="columna columna-completados">
-            <h2 className="titulo-columna">Completados</h2>
+          </div>
+        <section className="columna columna-completados">
+          <h2 className="titulo-columna">Completados</h2>
             {habitosCompletados.length > 0 && (
               <button
                 className="boton-eliminar-completados"

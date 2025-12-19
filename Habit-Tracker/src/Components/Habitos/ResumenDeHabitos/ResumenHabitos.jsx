@@ -1,13 +1,15 @@
 //resumen total de los habitos.}
 
+import "./ResumenHabitos.css";
+
 function Resumen({ total, completados }) {
   const pendientes = total - completados;
 
   return (
-    <div>
-      <p>Total: {total}</p>
-      <p>Completados: {completados}</p>
-      <p>Pendientes: {pendientes}</p>
+    <div className="contenedor-resumen">
+      <p className="dato-resumen">Total: {total}</p>
+      <p className="dato-resumen">Completados: {completados}</p>
+      <p className="dato-resumen">Pendientes: {pendientes}</p>
     </div>
   );
 }

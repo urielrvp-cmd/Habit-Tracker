@@ -1,9 +1,10 @@
 //Muestra la lista de habitos
 import ItemHabito from "../HabitosItem/HabitosItem";
+import "./ListaHabitosEstilos.css";
 
 function ListaHabitos({ habitos, onAlternar, onEliminar }) {
   if (habitos.length === 0) {
-    return <p>Sin hábitos</p>;
+    return <p className="mensaje-vacio">Sin hábitos</p>;
   }
 
   return (
