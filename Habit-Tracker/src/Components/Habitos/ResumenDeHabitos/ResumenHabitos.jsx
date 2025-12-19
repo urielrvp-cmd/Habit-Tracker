@@ -13,3 +13,4 @@ function Resumen({ total, completados }) {
 }
 
 export default Resumen;
+
