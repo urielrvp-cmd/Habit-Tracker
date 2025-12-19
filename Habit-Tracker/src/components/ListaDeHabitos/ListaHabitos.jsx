@@ -2,7 +2,7 @@
 import ItemHabito from "../HabitosItem/HabitosItem";
 import "./ListaHabitosEstilos.css";
 
-function ListaHabitos({ habitos, onAlternar, onEliminar }) {
+export default function ListaHabitos({ habitos, onAlternar, onEliminar }) {
   if (habitos.length === 0) {
     return <p className="mensaje-vacio">Sin hábitos</p>;
   }
@@ -20,5 +20,3 @@ function ListaHabitos({ habitos, onAlternar, onEliminar }) {
     </ul>
   );
 }
-
-export default ListaHabitos;

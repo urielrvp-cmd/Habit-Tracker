@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./HabitoItemEstilos.css"
 
-function ItemHabito({ habito, onAlternar, onEliminar }) {
+export default function ItemHabito({ habito, onAlternar, onEliminar }) {
   const [eliminando, setEliminando] = useState(false);
 
   const confirmarEliminacion = () => {
@@ -38,5 +38,3 @@ function ItemHabito({ habito, onAlternar, onEliminar }) {
     </li>
   );
 }
-
-export default ItemHabito;

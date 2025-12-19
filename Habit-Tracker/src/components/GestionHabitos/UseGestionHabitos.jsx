@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const CLAVE_STORAGE = "habitos-app";
 
-export function useHabitos() {
+export default function useHabitos() {
   const [habitos, setHabitos] = useState(() => {
     const datosGuardados = localStorage.getItem(CLAVE_STORAGE);
     return datosGuardados ? JSON.parse(datosGuardados) : [];

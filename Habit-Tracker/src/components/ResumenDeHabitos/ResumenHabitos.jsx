@@ -2,7 +2,7 @@
 
 import "./ResumenHabitos.css";
 
-function Resumen({ total, completados }) {
+export default function Resumen({ total, completados }) {
   const pendientes = total - completados;
 
   return (
@@ -13,6 +13,3 @@ function Resumen({ total, completados }) {
     </div>
   );
 }
-
-export default Resumen;
-

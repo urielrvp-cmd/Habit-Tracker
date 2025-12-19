@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useHabitos } from "./components/GestionHabitos/UseGestionHabitos";
-import FormularioHabito from "./components/FormularioNuevoHabitos/FormularioHabitos";
+import FormularioHabito from "./components/FormularioHabitos/FormularioHabitos";
 import ListaHabitos from "./components/ListaDeHabitos/ListaHabitos"
 import Resumen from "./components/ResumenDeHabitos/ResumenHabitos";
-import "./index.css"
+import "./App.css"
 
 const STORAGE_MODO = "modo-oscuro";
 
