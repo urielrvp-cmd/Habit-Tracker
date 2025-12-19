@@ -37,3 +37,12 @@ body,
               box-shadow 0.6s ease;
 }
 
+.contenedor-principal {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background: var(--fondo-app);
+  color: var(--texto-principal);
+}

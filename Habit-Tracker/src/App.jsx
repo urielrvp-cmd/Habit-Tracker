@@ -33,11 +33,9 @@ function App() {
       <header className="encabezado-aplicacion">
         <div className="barra-superior">
           <div className="logo-aplicacion">📘</div>
-
           <h1 className="titulo-aplicacion">
             Habit Tracker
           </h1>
-
           <button
             className="boton-modo"
             onClick={alternarModo}
@@ -47,33 +45,36 @@ function App() {
           </button>
         </div>
       </header>
-      <FormularioHabito onAgregar={agregarHabito} />
-      <section>
-        <h2>Pendientes</h2>
+
+      <main className="contenedor-principal"> 
+        <FormularioHabito onAgregar={agregarHabito} />
+          <section>
+            <h2>Pendientes</h2>
+              <ListaHabitos
+                habitos={habitosPendientes}
+                onAlternar={alternarHabito}
+                onEliminar={eliminarHabito}
+                />
+          </section>
+
+          <section>
+            <h2>Completados</h2>
+            {habitosCompletados.length > 0 && (
+              <button onClick={eliminarCompletados}>
+              Eliminar completados
+            </button>
+          )}
           <ListaHabitos
-            habitos={habitosPendientes}
+            habitos={habitosCompletados}
             onAlternar={alternarHabito}
             onEliminar={eliminarHabito}
+            />
+        </section>
+        <Resumen
+          total={habitos.length}
+          completados={habitosCompletados.length}
           />
-      </section>
-
-    <section>
-      <h2>Completados</h2>
-      {habitosCompletados.length > 0 && (
-        <button onClick={eliminarCompletados}>
-          Eliminar completados
-        </button>
-      )}
-      <ListaHabitos
-        habitos={habitosCompletados}
-        onAlternar={alternarHabito}
-        onEliminar={eliminarHabito}
-      />
-    </section>
-    <Resumen
-      total={habitos.length}
-      completados={habitosCompletados.length}
-    />
+      </main>  
     </div>
   );
 }
