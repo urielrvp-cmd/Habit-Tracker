@@ -1,7 +1,7 @@
 //Muestra la lista de habitos
 import ItemHabito from "../HabitosItem/HabitosItem";
 
-function ListaHabitos({ habitos }) {
+function ListaHabitos({ habitos, onAlternar }) {
   if (habitos.length === 0) {
     return <p>Sin hábitos</p>;
   }
@@ -12,6 +12,7 @@ function ListaHabitos({ habitos }) {
         <ItemHabito
           key={habito.id}
           habito={habito}
+          onAlternar={onAlternar}
         />
       ))}
     </ul>

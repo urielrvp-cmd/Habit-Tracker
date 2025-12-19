@@ -4,12 +4,27 @@ import ListaHabitos from "./Components/Habitos/ListaDeHabitos/ListaHabitos"
 
 
 function App() {
-  const { habitos, agregarHabito } = useHabitos();
+  const { habitos, habitosPendientes, agregarHabito,
+  habitosCompletados, alternarHabito} = useHabitos();
   return (
     <div>
       <h1>Habit Tracker</h1>
       <FormularioHabito onAgregar={agregarHabito} />
-      <ListaHabitos habitos={habitos} />
+      <section>
+        <h2>Pendientes</h2>
+          <ListaHabitos
+            habitos={habitosPendientes}
+            onAlternar={alternarHabito}
+          />
+      </section>
+
+    <section>
+      <h2>Completados</h2>
+      <ListaHabitos
+        habitos={habitosCompletados}
+        onAlternar={alternarHabito}
+      />
+    </section>
     </div>
   );
 }
