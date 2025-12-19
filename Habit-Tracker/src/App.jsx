@@ -11,7 +11,8 @@ function App() {
     agregarHabito,
     habitosCompletados, 
     alternarHabito, 
-    eliminarHabito,} = useHabitos();
+    eliminarHabito,
+    eliminarCompletados,} = useHabitos();
 
   return (
     <div>
@@ -28,6 +29,11 @@ function App() {
 
     <section>
       <h2>Completados</h2>
+      {habitosCompletados.length > 0 && (
+        <button onClick={eliminarCompletados}>
+          Eliminar completados
+        </button>
+      )}
       <ListaHabitos
         habitos={habitosCompletados}
         onAlternar={alternarHabito}
