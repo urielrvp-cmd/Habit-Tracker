@@ -5,8 +5,13 @@ import Resumen from "./Components/Habitos/ResumenDeHabitos/ResumenHabitos";
 
 
 function App() {
-  const { habitos, habitosPendientes, agregarHabito,
-  habitosCompletados, alternarHabito} = useHabitos();
+  const { 
+    habitos, 
+    habitosPendientes, 
+    agregarHabito,
+    habitosCompletados, 
+    alternarHabito, 
+    eliminarHabito,} = useHabitos();
 
   return (
     <div>
@@ -17,6 +22,7 @@ function App() {
           <ListaHabitos
             habitos={habitosPendientes}
             onAlternar={alternarHabito}
+            onEliminar={eliminarHabito}
           />
       </section>
 
@@ -25,6 +31,7 @@ function App() {
       <ListaHabitos
         habitos={habitosCompletados}
         onAlternar={alternarHabito}
+        onEliminar={eliminarHabito}
       />
     </section>
     <Resumen
