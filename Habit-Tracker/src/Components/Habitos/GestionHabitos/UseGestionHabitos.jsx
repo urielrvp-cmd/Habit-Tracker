@@ -1,6 +1,7 @@
 //Manejara toda la logica y el estado de los habitos.
-
 import { useState } from "react";
+
+const CLAVE_STORAGE = "habitos-app";
 
 export function useHabitos() {
   const [habitos, setHabitos] = useState(() => {
