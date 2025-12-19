@@ -7,6 +7,37 @@ export function useHabitos() {
     const datosGuardados = localStorage.getItem(CLAVE_STORAGE);
     return datosGuardados ? JSON.parse(datosGuardados) : [];
   });
+  
+  const guardarEnStorage = (nuevosHabitos) => {
+  localStorage.setItem(CLAVE_STORAGE, JSON.stringify(nuevosHabitos));
+  setHabitos(nuevosHabitos);
+  };
+
+  const agregarHabito = (nombre) => {
+    const nuevo = {
+      id: crypto.randomUUID(),
+      nombre,
+      completado: false,
+    };
+    guardarEnStorage([...habitos, nuevo]);
+  };
+
+  const alternarHabito = (id) => {
+    const nuevosHabitos = habitos.map((h) =>
+      h.id === id ? { ...h, completado: !h.completado } : h
+    );
+    guardarEnStorage(nuevosHabitos);
+  };
+
+  const eliminarHabito = (id) => {
+    const nuevosHabitos = habitos.filter((h) => h.id !== id);
+    guardarEnStorage(nuevosHabitos);
+  };
+
+  const eliminarCompletados = () => {
+    const nuevosHabitos = habitos.filter((h) => !h.completado);
+    guardarEnStorage(nuevosHabitos);
+  };
 
   return { habitos };
 }
