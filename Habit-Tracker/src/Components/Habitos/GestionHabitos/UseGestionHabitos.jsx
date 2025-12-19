@@ -1,0 +1,1 @@
+//Manejara toda la logica y el estado de los habitos.

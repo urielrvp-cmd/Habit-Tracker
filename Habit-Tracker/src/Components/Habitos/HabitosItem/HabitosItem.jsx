@@ -1,0 +1,1 @@
+// Mostrar un habito individual e permite interactuar con el.
