@@ -13,14 +13,15 @@ function FormularioHabito({ onAgregar }) {
   };
 
   return (
-    <form onSubmit={manejarEnvio}>
+    <form className="formulario-habito" onSubmit={manejarEnvio}>
       <input
+        className="campo-habito"
         type="text"
         placeholder="Nuevo hábito"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
       />
-      <button>Agregar</button>
+      <button className="boton-agregar-habito">Agregar</button>
     </form>
   );
 }
