@@ -39,5 +39,15 @@ export function useHabitos() {
     guardarEnStorage(nuevosHabitos);
   };
 
-  return { habitos };
+  const habitosCompletados = habitos.filter((h) => h.completado);
+  const habitosPendientes = habitos.filter((h) => !h.completado);
+
+  return { habitos,
+    habitosCompletados,
+    habitosPendientes,
+    agregarHabito,
+    alternarHabito,
+    eliminarHabito,
+    eliminarCompletados,
+   };
 }
